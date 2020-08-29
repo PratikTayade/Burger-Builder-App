@@ -6,14 +6,14 @@ import classes from './SideDrawer.module.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import Auxillary from '../../../hoc/Auxillary/Auxillary';
 
-const sideDrawer = (props) => {
-    let attachedClasses = [classes.SideDrawer , classes.Close]
-    if(props.open){
-        attachedClasses = [classes.SideDrawer , classes.Open]
+const sideDrawer = ( props ) => {
+    let attachedClasses = [classes.SideDrawer, classes.Close];
+    if (props.open) {
+        attachedClasses = [classes.SideDrawer, classes.Open];
     }
-    return(
+    return (
         <Auxillary>
-            <Backdrop show={props.open} clicked={props.closed} />
+            <Backdrop show={props.open} clicked={props.closed}/>
             <div className={attachedClasses.join(' ')}>
                 <div className={classes.Logo}>
                     <Logo />
@@ -23,7 +23,7 @@ const sideDrawer = (props) => {
                 </nav>
             </div>
         </Auxillary>
-    )
+    );
 };
 
 export default sideDrawer;
